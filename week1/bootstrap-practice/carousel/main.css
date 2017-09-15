@@ -1,0 +1,49 @@
+.nav-margin{
+  margin-top:20px;
+}
+.carousel{
+  height: 500px;
+  margin-bottom:60px;
+}
+.carousel .item{
+  height:500px;
+  background-color: #989AFF;
+}
+.container{
+  width:auto:
+}
+.carousel-caption{
+  z-index:10;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+.img-circle{
+  width:140px;
+  height:140px;
+}
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing .col-lg-4 p{
+  margin-left:20px;
+  margin-right:20px;
+}
+.divider{
+  margin:50px;
+}
+.marketing h2 {
+  margin-top:120px;
+}

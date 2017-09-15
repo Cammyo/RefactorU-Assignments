@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="quoteApp" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+
+  <title>So Inspirational!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body ng-controller="quoteCtrl as qCtrl" class="background">
+  
+  <div class="jumbotron"><h2>Weow! Quoterinos!</h2></div>
+  
+  <div class="float-box">
+    <h3>Quote Input:</h3>
+    <form action="name">
+      <div class="form-group">
+        <label for="Name">Name:</label>
+        <input type="text" class="form-control" id="Name" placeholder="John Judgerman...?">
+      </div>
+      <div class="form-group">
+        <label for="Quote">Quote:</label>
+        <input type="text" class="form-control" id="Quote" placeholder="To quote or not to quote">
+      </div>
+      <div class="form-group">
+        <label for="Rating">Rating:</label>
+        <select id="Rating" class="form-control">
+          <option selected disabled>How good is this, really?</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <button ng-click="qCtrl.submitQuote()" class="btn btn-large btn-default">Submit</button>
+    </form>
+  </div>
+  
+  <div class="container">
+    <div class="row" ng-repeat="quote in qCtrl.quotes">
+      <div class="col-xs-3 quote-box">
+        <p class="pull-left">{{quote.name}}</p>
+        <p class="pull-right">{{quote.rating}}</p>
+      </div>
+      <div class="col-xs-9 quote-box">
+        <p class="text-center">{{quote.quote}}</p>
+      </div>
+      <div class="col-xs-12"><hr></div>
+    </div>
+  </div>
+  
+</body>
+</html>

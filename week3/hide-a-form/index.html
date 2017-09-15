@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="HIDE-A-FORM" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HIDE THAT SH**</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+  <script src="hide-a-form.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body ng-controller="HIDDEN as hide" style="background-color:dimgrey;color:white;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12" style="border:5px solid lightgrey;margin-top:50px">
+        <p>Name: {{hide.profile.name}}</p>
+        <div class="col-sm-4">bio:<br><p>{{hide.profile.bio}}</p></div>
+        <div class="col-sm-4">fav books:<br><p>{{hide.profile.books}}</p></div>
+        <div class="col-sm-4">fav js libs:<br><p>{{hide.profile.jsLib}}</p></div>
+      </div>
+    </div>
+  <button style="margin-top:5px" class="btn btn-default" ng-click="hide.btnShow = !hide.btnShow">{{hide.btnName}}</button>
+  </div>
+  <hr>
+  <div class="container panel panel-default">
+    <div class="row">
+      <div class="col-xs-4 panel-body">
+        <form style="border:5px solid lightgrey;" action="" ng-show="hide.btnShow">
+          <fieldset style="margin-left:10px">
+            <legend>Update Profile:</legend>
+            Name:<br>
+            <input ng-model="hide.profile.name" type="text" placeholder="Name"><br>
+            Bio:<br>
+            <input ng-model="hide.profile.bio" type="text" placeholder="Bio"><br>
+            Favorite Books:<br>
+            <input ng-model="hide.profile.books" type="text" placeholder="Books"><br>
+            Favorite Javascript Libraries:<br>
+            <input ng-model="hide.profile.jsLib" type="text" placeholder="JS Libraries"><br><br>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

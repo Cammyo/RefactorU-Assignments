@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="scRankingApp" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DED GAEM RANKS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+  <script src="starcraft-rankings.js"></script>
+</head>
+<body ng-controller="StarcraftController as sc" class="background">
+  <div class="jumbotron text-center"><h2>Starcraft Player Rankings</h2></div>
+  <div class="filters-box info-box">
+    <h3>Filters:</h3>
+    <label>Races:</label>
+    <select class="form-control" ng-model="sc.filter.race">
+      <option value="">All</option>
+      <option value="Protoss">Protoss</option>
+      <option value="Terran">Terran</option>
+      <option value="Zerg">Zerg</option>
+    </select><br>
+    <label>Regions:</label>
+    <select class="form-control" ng-model="sc.filter.region">
+      <option value="">All</option>
+      <option value="America">America</option>
+      <option value="Europe">Europe</option>
+      <option value="Korea">Korea</option>
+    </select>
+  </div>
+  <div class="info-box stats-box">
+    <h3>Statistics:</h3>
+    <p>Total Games Played: {{sc.totalGames}}</p>
+    <p>Total Players: {{sc.players.length}}</p>
+    <h4>Race Popularity -</h4>
+    <p>Protoss: {{sc.races[0]}}</p>
+    <p>Terran: {{sc.races[1]}}</p>
+    <p>Zerg: {{sc.races[2]}}</p>
+  </div>
+  <div class="container text-center">
+    <div class="row">
+      <table class="col-xs-12 table table-hover table-condensed table-striped">
+        <thead>
+          <tr>
+            <th class="text-center" ng-repeat="eachColumn in sc.columns">{{eachColumn.toUpperCase()}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="eachRow in sc.players | filter : sc.filter.race : player[3] | filter : sc.filter.region : player[2] | limitTo : sc.pageSize : sc.currentPage">
+            <td>{{eachRow[0]}}</td>
+            <td>{{eachRow[1]}}</td>
+            <td>{{eachRow[2]}}</td>
+            <td>{{eachRow[3]}}</td>
+            <td>{{eachRow[4]}}</td>
+            <td>{{eachRow[5]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+<!--This Pagination doesn't work with filters-->
+    <div class="row pagination">
+      <button class="btn btn-default" ng-disabled="sc.currentPage <= 0" ng-click="sc.currentPage=0">
+        First</button>
+      <button class="btn btn-default" ng-disabled="sc.currentPage <= 0" 
+              ng-click="sc.currentPage=sc.currentPage-20">
+        <<<</button>
+      <button class="btn btn-default" ng-disabled="sc.currentPage >= sc.players.length - 20" 
+              ng-click="sc.currentPage=sc.currentPage+20">
+        >>></button>
+        <button class="btn btn-default" ng-disabled="sc.currentPage >= sc.players.length - 20"
+              ng-click="sc.currentPage=sc.players.length - 20">
+          Last</button>
+    </div>
+  </div>
+  
+  <footer class="footer text-center">Lizard Conspiracy Theories Inc</footer>
+    
+</body>
+</html>

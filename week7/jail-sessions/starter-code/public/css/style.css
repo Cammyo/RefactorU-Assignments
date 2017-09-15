@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.space {
+    height: 40px;
+}
+
+.jail-user {
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+}
+.text-center {
+    text-align: center;
+}
+
+.jail-container {
+    height: 600px;
+    width: 700px;
+    margin: auto;
+    border: 2px solid #111;
+    background-color: #666;
+    position: relative;
+}
+
+/*.cell-container {
+    display: flex;
+    justify-content: space-between;
+}*/
+
+.room {
+    height: 200px;
+    width: 300px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+    vertical-align: middle;
+    background-color: dodgerblue;
+    border: 2px solid #111;
+    position: absolute;
+}
+.cell {
+    background-color: dodgerblue;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    font-size: 18px;
+    height: 80px;
+    width: 25%;
+    display:inline-block;
+    border: 2px solid #111;
+    float:left;
+}
+
+.lobby {
+    bottom: 0px;
+}
+
+.wardens-office {
+    bottom: 0px;
+    right: 0px;
+}
+
+.cafeteria {
+    right: 0px;
+    top: 120px;
+}
+
+.visitors-lounge {
+    top: 120px;
+}
+
+.door-horizontal {
+    width: 100px;
+    height: 4px;
+    background-color: red;
+    position: absolute;
+}
+.door-vertical {
+    height: 100px;
+    width: 4px;
+    background-color: red;
+    position: absolute;
+}
+.main-entrance {
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.door-a {
+    top: 77px;
+    left: 35px;
+}
+.door-b {
+    top: 77px;
+    left: 212px;
+}
+.door-e {
+    top: 77px;
+    left: 385px;
+}
+.door-m {
+    top: 77px;
+    left: 555px;
+}
+
+.hall-door {
+    left: 298px;
+    top: 316px;
+}
+
+.visitors-south-door {
+    top: 316px;
+    left: 100px;
+}
+.visitors-east-door {
+    left: 297px;
+    top: 170px;
+}
+.lobby-door {
+    bottom: 45px;
+    left: 297px;
+}
+
+.wardens-door {
+    bottom: 45px;
+    left: 395px;
+}
+
+.cafeteria-door {
+    left: 395px;
+    top: 170px;
+}

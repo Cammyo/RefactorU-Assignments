@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="angintro" lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+  <script src="intro-to-angular.js"></script>
+  <link rel="stylesheet" href="main.css">
+
+  <meta charset="UTF-8">
+  <title>Into-To-Angular</title>
+</head>
+<body ng-controller="angcontrol as angCtrl" style="background-color:DimGrey;color:white;">
+  <div>
+    <h1>
+      {{angCtrl.greeting}}
+    </h1>
+  </div>
+  <div>
+    <button ng-click="angCtrl.btnlog()">CLICK MEEEEE</button>
+    <h1>
+      {{angCtrl.h1z1}}
+    </h1>
+  </div>
+  <div>
+    <button ng-click="angCtrl.goList = !angCtrl.goList">NO CLICK MEEE</button>
+    <div>
+      <ul ng-show="angCtrl.goList">
+        <li>
+          UNO
+        </li>
+        <li>
+          DOS
+        </li>
+        <li>
+          TRES
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row" style="text-align:center;">
+      <div class="col-lg-4 panelThing">
+        <h2 ng-mouseover="angCtrl.hoverBang()" ng-mouseleave="angCtrl.hoverBangLeave()">Mouse{{angCtrl.bang}}</h2>
+        <p ng-mouseover="angCtrl.hoverPink()" ng-mouseleave="angCtrl.hoverPinkLeave()" class="{{angCtrl.pink}}">Laborum aute glossier skateboard helvetica delectus consequat, tattooed deserunt tumeric franzen ut chillwave. Tumblr shabby chic incididunt hell of snackwave, aliquip drinking vinegar small batch. Wolf kogi wayfarers godard gentrify. Swag locavore unicorn, fap scenester offal next level narwhal kinfolk exercitation ea dolore aliqua. Prism celiac pariatur, chicharrones meditation live-edge duis plaid. Man bun edison bulb vinyl, marfa adipisicing quinoa live-edge bitters whatever austin vegan elit anim vero organic. Fingerstache viral odio fixie cliche glossier, aesthetic PBR consequat.</p>
+        <div>
+          <a ng-click="angCtrl.linkLeave($event)" href="/">Linkarino</a>
+        </div>
+      </div>
+      <div class="col-lg-4 panelThing">
+        <h2 ng-mouseover="angCtrl.hoverBang()" ng-mouseleave="angCtrl.hoverBangLeave()">Over{{angCtrl.bang}}</h2>
+        <p ng-mouseover="angCtrl.hoverPink()" ng-mouseleave="angCtrl.hoverPinkLeave()" class="{{angCtrl.pink}}">Humblebrag cred incididunt tacos blue bottle neutra, fashion axe fugiat shoreditch messenger bag woke tofu irony unicorn retro. Poke vegan fingerstache, retro tacos four dollar toast unicorn officia celiac chambray duis raw denim. Tbh art party put a bird on it ut keytar, freegan selfies. Kitsch live-edge art party vegan aliquip. Organic lyft health goth, post-ironic cupidatat aute paleo jianbing. Blog hot chicken vape selvage iceland pitchfork, succulents glossier authentic street art quinoa ad accusamus et. Laborum dolor eiusmod helvetica migas disrupt.</p>
+        <div>
+          <a ng-click="angCtrl.linkLeave($event)" href="/">Weow a link</a>
+        </div>
+      </div>
+      <div class="col-lg-4 panelThing">
+        <h2 ng-mouseover="angCtrl.hoverBang()" ng-mouseleave="angCtrl.hoverBangLeave()">Exclamations{{angCtrl.bang}}</h2>
+        <p ng-mouseover="angCtrl.hoverPink()" ng-mouseleave="angCtrl.hoverPinkLeave()" class="{{angCtrl.pink}}">Laborum aute glossier skateboard helvetica delectus consequat, tattooed deserunt tumeric franzen ut chillwave. Tumblr shabby chic incididunt hell of snackwave, aliquip drinking vinegar small batch. Wolf kogi wayfarers godard gentrify. Swag locavore unicorn, fap scenester offal next level narwhal kinfolk exercitation ea dolore aliqua. Prism celiac pariatur, chicharrones meditation live-edge duis plaid. Man bun edison bulb vinyl, marfa adipisicing quinoa live-edge bitters whatever austin vegan elit anim vero organic. Fingerstache viral odio fixie cliche glossier, aesthetic PBR consequat.</p>
+        <div>
+          <a ng-click="angCtrl.linkLeave($event)" href="/">Linkachino</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-5"></div>
+      <div class="col-lg-7">
+        <button class="btn btn-large">WOWOWOWOWOWOW</button>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

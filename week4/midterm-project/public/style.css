@@ -1,0 +1,33 @@
+.background{
+  background-color:DimGrey;
+}
+.gameArea{
+  margin-top:32px;
+}
+.col-box{
+  
+}
+.jumbotron{
+  background-color:black;
+  text-align:center;
+  color:white;
+}
+.mouseContainer{
+  background-color:lightgrey;
+}
+.emptyContainer{
+  background-color:firebrick;
+}
+.startContainer{
+  background-color: #11FF00;
+}
+.endContainer{
+  background-color: #FF0000;
+}
+#maze {
+    border-collapse: collapse;
+}
+#maze td {
+    width: 10px;
+    height: 10px;
+}

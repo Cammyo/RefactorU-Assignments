@@ -1,0 +1,10 @@
+.center {
+  text-align:center; 
+}
+.btn-txt{
+  text-transform:uppercase;
+  color:white;
+}
+.btn-jumbo {
+  font-size:20px;
+}

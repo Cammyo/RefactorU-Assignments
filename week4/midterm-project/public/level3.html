@@ -1,0 +1,21 @@
+<div class="container gameArea">
+  <div class="row">
+    <div class="col-xs-12" ng-mouseenter="maze.leave()" ng-class="maze.gameState ? 'emptyContainer':'background'"><br><br><br><br><br></div>
+    <div class="col-xs-1" ng-mouseenter="maze.leave()" ng-class="maze.gameState ? 'emptyContainer':'background'"><br><br><br><br><br></div>
+    <div class="col-xs-1 startContainer" ng-mouseover="maze.start()"><br><br><br><br><br></div>
+    <div class="col-xs-8" ng-mouseenter="maze.leave()" ng-class="maze.gameState ? 'emptyContainer':'background'"><br><br><br><br><br></div>
+    <a href="#/level4"><div class="col-xs-1 endContainer" ng-if="maze.gameState" ng-click="maze.nextLevel()"><br><br><br><br><br></div></a>
+    <div class="col-xs-1" ng-mouseenter="maze.leave()" ng-class="maze.gameState ? 'emptyContainer':'background'"><br><br><br><br><br></div>
+  </div>
+  <div class="row" ng-repeat="eachRow in maze.level3 track by $index">
+    <div class="col-xs-1" ng-repeat="eachCell in eachRow track by $index"  ng-if="maze.gameState"
+      ng-mouseover="maze.checkCell(eachCell)"
+      ng-class="{
+        'emptyContainer' : eachCell == 0,
+        'mouseContainer' : eachCell == 1,
+        'startContainer' : eachCell == 2,
+        'endContainer'   : eachCell == 3}">
+      <br><br><br><br><br>
+    </div>
+  </div>
+</div>

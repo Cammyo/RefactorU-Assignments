@@ -1,0 +1,45 @@
+<div class="container gameArea">
+  <div class="row">
+    
+    <div class="col-xs-12" ng-mouseenter="maze.leave()" ng-class="maze.gameState ? 'emptyContainer':'background'"><br><br></div>
+    
+    <div class="col-xs-1" ng-mouseenter="maze.leave()" ng-class="maze.gameState ? 'emptyContainer':'background'"><br><br><br></div>
+    <div class="col-xs-1 startContainer" ng-mouseover="maze.start()"><br><br><br></div>
+    <div class="col-xs-8 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <a href="#/level3">
+      <div class="col-xs-1 endContainer" ng-if="maze.gameState" ng-click="maze.nextLevel()"><br><br><br></div>
+    </a>
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <div class="col-xs-1 mouseContainer" ng-if="maze.gameState"><br><br><br></div>
+    <div class="col-xs-8 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <div class="col-xs-1 mouseContainer" ng-if="maze.gameState"><br><br><br></div>
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <div class="col-xs-1 mouseContainer" ng-if="maze.gameState"><br><br><br></div>
+    <div class="col-xs-8 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <div class="col-xs-1 mouseContainer" ng-if="maze.gameState"><br><br><br></div>
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <div class="col-xs-1 mouseContainer" ng-if="maze.gameState"><br><br><br></div>
+    <div class="col-xs-8 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <div class="col-xs-1 mouseContainer" ng-if="maze.gameState"><br><br><br></div>
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <div class="col-xs-1 mouseContainer" ng-if="maze.gameState"><br><br><br></div>
+    <div class="col-xs-8 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <div class="col-xs-1 mouseContainer" ng-if="maze.gameState"><br><br><br></div>
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    <div class="col-xs-10 mouseContainer" ng-if="maze.gameState"><br><br><br></div>
+    <div class="col-xs-1 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br><br></div>
+    
+    <div class="col-xs-12 emptyContainer" ng-if="maze.gameState" ng-mouseenter="maze.leave()"><br><br></div>
+    
+  </div>
+</div>

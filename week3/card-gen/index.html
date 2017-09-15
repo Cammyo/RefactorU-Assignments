@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="appCardGen" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MCNUGGETSTHEGREAT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+  <script src="card-gen.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body ng-controller="cardCtrl as card" style="background-color:dimgrey;text-align:center;color:white;">
+  <div class="jumbotron" style="background-color:black;">
+    <h2>
+      Magic Nerds Unite!
+    </h2>
+  </div>
+  <div class="container" style="margin-top:50px;">
+    <form> 
+      <div class="row">
+        <div class="col-xs-12 col-sm-3">Name:<br>
+          <input ng-model="card.newCard.name" type="text">
+        </div>
+        <div class="col-xs-12 col-sm-3">Mana Color:<br>
+          <input ng-model="card.newCard.manaColor" type="text">
+        </div>
+        <div class="col-xs-12 col-sm-3">Power:<br>
+          <input ng-model="card.newCard.power" type="number">
+        </div>
+        <div class="col-xs-12 col-sm-3">Toughness:<br>
+          <input ng-model="card.newCard.toughness" type="number">
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-xs-12">Art:<br>
+          <input ng-model="card.newCard.art" type="text">
+        </div>
+      </div>
+      <br>
+      <button ng-click="card.addCard()" type="submit" class="btn btn-success">Add Card</button>
+    </form>
+  </div><hr>
+  <div class="container">
+    <div class="row">
+      <div ng-repeat="eachCard in card.packs" class="col-xs-12 col-sm-4" style="min-height:150px;border:2px solid lightgrey;">
+        <img style="height:150px;float:right;" src="{{eachCard.art}}" alt="">
+        <br>
+        <p style="float:right;">{{eachCard.manaColor}}</p>
+        <p style="float:left;" class="strong">{{eachCard.name}}</p>
+        <br>
+        <p>  Power: {{eachCard.power}}</p>
+        <p>  Toughness: {{eachCard.toughness}}</p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,38 @@
+.background{
+  background-color:dimgrey;
+}
+.jumbotron{
+  background-color:black;
+  color:white;
+}
+.info-box{
+  position:fixed;
+  margin:0px 50px;
+  padding:10px;
+  border:4px solid lightgrey;
+  width:250px;
+  color:white;
+}
+.footer{
+  position:fixed;
+  bottom:0;
+  margin-left:20px;
+}
+.table{
+  color:white;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color:darkgray;
+}
+.table-hover > tbody > tr:hover {
+  background-color:black;
+}
+.page-btn{
+  bottom:20px;
+}
+.stats-box{
+  right:0px;
+}
+.filters-box{
+  left:0px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+    	<title>Dashboard</title>
+        <link rel="stylesheet" href="/css/style.css">
+    	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    </head>
+    <body ng-cloak ng-controller="mainController">
+    	<h1>Hey there {{ user.username }}!</h1>
+        <div class="jail-container">
+            <div class="cell a">Cell A</div>
+            <div class="cell b">Cell B</div>
+            <a href="/cell-e"><div class="cell e">Cell E</div></a>
+            <a href="/cell-m"><div class="cell m">Cell M</div></a>
+            <a href="/wardens-office"><div class="room wardens-office">Warden&apos;s Office</div></a>
+            <a href="/visitors-lounge"><div class="room visitors-lounge">Visitors&apos; Lounge</div></a>
+            <a href="/cafeteria"><div class="room cafeteria">Cafeteria</div></a>
+            <a href="/lobby"><div class="room lobby">Lobby</div></a>
+            <div class="door-horizontal main-entrance"></div>
+            <div class="door-horizontal hall-door"></div>
+            <div class="door-horizontal visitors-south-door"></div>
+            <div class="door-horizontal door-a"></div>
+            <div class="door-horizontal door-b"></div>
+            <div class="door-horizontal door-e"></div>
+            <div class="door-horizontal door-m"></div>
+            <div class="door-vertical lobby-door"></div>
+            <div class="door-vertical wardens-door"></div>
+            <div class="door-vertical cafeteria-door"></div>
+            <div class="door-vertical visitors-east-door"></div>
+        </div>
+    	<script src="/js/jail.js"></script>
+    </body>
+</html>
